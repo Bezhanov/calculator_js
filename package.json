@@ -1,0 +1,17 @@
+{
+  "name": "calculator_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "serve": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "liquidjs": "^10.6.1",
+    "nodemon": "^2.0.22"
+  }
+}

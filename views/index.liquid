@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    {% include './partials/navbar.liquid' %}
+
+    <h1>Simple Calculator</h1>
+
+    <form method="POST">
+      <input
+        type="text"
+        name="op1"
+        value="{{op1}}">
+      <select name="operation">
+        <option value="+" {% if operation == '+' %}selected{%endif%}>+</option>
+        <option value="-" {% if operation == '-' %}selected{%endif%}>-</option>
+        <option value="*" {% if operation == '*' %}selected{%endif%}>*</option>
+        <option value="/" {% if operation == '/' %}selected{%endif%}>/</option>
+      </select>
+      <input
+        type="text"
+        name="op2"
+        value="{{op2}}">
+
+      <br/>
+      <br/>
+      <input type="submit" value="Calculate">
+    </form>
+    <h3>Result: {{ result }}</h3>
+
+  </body>
+</html>
